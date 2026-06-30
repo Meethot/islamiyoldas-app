@@ -22,7 +22,7 @@ const steps = [
 ];
 
 export function HowItWorks() {
-    const [particles, setParticles] = (typeof window !== 'undefined') ? useState<{ id: number; x: number; y: number }[]>([]) : [[] as any, () => { }];
+    const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([]);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
@@ -73,7 +73,7 @@ export function HowItWorks() {
                             <span className="text-islamic-green">Güçlü.</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-12">
-                            İslami Yoldaş'ı mümkün olduğunca sezgisel olacak şekilde tasarladık.
+                            İslami Yoldaş&apos;ı mümkün olduğunca sezgisel olacak şekilde tasarladık.
                             Karmaşa yok, reklam yok, sadece siz ve inancınız dingin bir
                             dijital ortamda.
                         </p>

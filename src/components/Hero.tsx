@@ -63,7 +63,15 @@ export function Hero() {
                                         className="h-full w-auto"
                                     />
                                 </a>
-
+                                <a href="https://play.google.com/store/apps/details?id=com.islamiyoldas.app" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-105 active:scale-95 h-[64px] flex items-center">
+                                    <Image
+                                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Google Play"
+                                        width={180}
+                                        height={60}
+                                        className="h-full w-auto"
+                                    />
+                                </a>
                             </div>
                         </div>
 
@@ -85,7 +93,7 @@ export function Hero() {
                                     +20k
                                 </div>
                             </div>
-                            <p>20.000'den fazla kullanıcı tarafından güveniliyor</p>
+                            <p>20.000&apos;den fazla kullanıcı tarafından güveniliyor</p>
                         </div>
                     </motion.div>
 
@@ -169,7 +177,7 @@ export function Hero() {
                                     <p className="text-xs text-white font-bold tracking-wide uppercase">Günün Ayeti</p>
                                 </div>
                                 <p className="text-xs text-gray-300 italic max-w-[180px] leading-relaxed">
-                                    "Namazı dosdoğru kılın... O, gerçekten büyük bir iştir."
+                                    &quot;Namazı dosdoğru kılın... O, gerçekten büyük bir iştir.&quot;
                                 </p>
                             </motion.div>
                         </div>

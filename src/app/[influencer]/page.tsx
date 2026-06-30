@@ -22,8 +22,12 @@ export default function InfluencerRedirect() {
       // Vercel Analytics'e influencer ismi VE Cihaz bilgisi ile birlikte etkinlik gönder
       track("Influencer Redirect", { name: influencer, os: os });
       
-      // Şimdilik herkesi App Store'a yönlendiriyoruz. (Eğer Android linkiniz varsa onu da buraya ekleyebiliriz)
-      window.location.href = `https://apps.apple.com/tr/app/i-slami-yolda%C5%9F-namaz-ramazan/id6759666173?pt=128582746&ct=${influencer}&mt=8&l=tr`;
+      // Cihaza göre doğru mağazaya yönlendiriyoruz
+      if (os === "Android") {
+        window.location.href = `https://play.google.com/store/apps/details?id=com.islamiyoldas.app&referrer=utm_source%3D${influencer}`;
+      } else {
+        window.location.href = `https://apps.apple.com/tr/app/i-slami-yolda%C5%9F-namaz-ramazan/id6759666173?pt=128582746&ct=${influencer}&mt=8&l=tr`;
+      }
     }
   }, [influencer]);
 
@@ -32,7 +36,7 @@ export default function InfluencerRedirect() {
       <div className="flex flex-col items-center gap-4">
         <div className="w-10 h-10 border-4 border-islamic-green border-t-transparent rounded-full animate-spin"></div>
         <p className="text-gray-400 font-medium animate-pulse">
-          App Store'a yönlendiriliyorsunuz...
+          Mağazaya yönlendiriliyorsunuz...
         </p>
       </div>
     </div>
